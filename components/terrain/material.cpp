@@ -130,7 +130,7 @@ namespace
         osg::ref_ptr<osg::BlendFunc> mValue;
 
         BlendFuncFirst()
-            : mValue(new osg::BlendFunc(osg::BlendFunc::SRC_ALPHA, osg::BlendFunc::ZERO, osg::BlendFunc::ONE, osg::BlendFunc::ZERO))
+            : mValue(new osg::BlendFunc(osg::BlendFunc::SRC_ALPHA, osg::BlendFunc::ZERO))
         {
         }
     };
