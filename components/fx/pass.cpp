@@ -196,9 +196,9 @@ mat4 omw_InvProjectionMatrix()
     vec3 omw_GetNormals(vec2 uv)
     {
 #if OMW_MULTIVIEW
-        return omw_Texture2DArray(omw_SamplerNormals, vec3(uv, gl_ViewID_OVR)).rgb * 2.0 - 1.0;
+        return normalize(omw_Texture2DArray(omw_SamplerNormals, vec3(uv, gl_ViewID_OVR)).rgb * 2.0 - 1.0);
 #else
-        return omw_Texture2D(omw_SamplerNormals, uv).rgb * 2.0 - 1.0;
+        return normalize(omw_Texture2D(omw_SamplerNormals, uv).rgb * 2.0 - 1.0);
 #endif
     }
 
